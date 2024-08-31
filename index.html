@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-48GJNMH53G"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-48GJNMH53G");
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ghola</title>
@@ -29,21 +44,27 @@
       <div class="video-overlay">
         <main class="main-content">
           <h1>Bring characters to life</h1>
-          <p>
-            From pages to pixels: Your favorite book characters, visualized
-          </p>
+          <p>From pages to pixels: Your favorite book characters, visualized</p>
 
           <div class="scrolling-text">
             <div class="scroll-container">
-                <div class="scroll-content">
-                    Harry Potter • Sherlock Holmes • Katniss Everdeen • Frodo Baggins • Elizabeth Bennet • Hermione Granger • Atticus Finch • Lisbeth Salander • Jay Gatsby • Scout Finch •
-                    Harry Potter • Sherlock Holmes • Katniss Everdeen • Frodo Baggins • Elizabeth Bennet • Hermione Granger • Atticus Finch • Lisbeth Salander • Jay Gatsby • Scout Finch
-                </div>
+              <div class="scroll-content">
+                Harry Potter • Sherlock Holmes • Katniss Everdeen • Frodo
+                Baggins • Elizabeth Bennet • Hermione Granger • Atticus Finch •
+                Lisbeth Salander • Jay Gatsby • Scout Finch • Harry Potter •
+                Sherlock Holmes • Katniss Everdeen • Frodo Baggins • Elizabeth
+                Bennet • Hermione Granger • Atticus Finch • Lisbeth Salander •
+                Jay Gatsby • Scout Finch
+              </div>
             </div>
-        </div>
+          </div>
 
           <div class="input-container">
-            <input type="text" class="text-input" placeholder="Eg. Voldemort from Harry Potter">
+            <input
+              type="text"
+              class="text-input"
+              placeholder="Eg. Voldemort from Harry Potter"
+            />
             <button class="go-button">Go</button>
           </div>
           <div id="loading-spinner" class="loading-spinner">
