@@ -47,7 +47,7 @@ function callCharacterAPI() {
     return response.json();
   })
   .then(data => {
-    console.log('First API Response:', data);
+    console.log('First API Response:', data.response);
     if (data.response) {
       // Second API call
       console.log("Making second API call to:", characterSDUrl);
@@ -57,9 +57,7 @@ function callCharacterAPI() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ 
-          prompt: data.response,
-          style_preset: "enhance",
-          aspect_ratio: "2:3"
+          prompt: data.response
          }),
       });
     } else {
@@ -74,10 +72,10 @@ function callCharacterAPI() {
   })
   .then(data => {
     console.log('Second API Response:', data);
-    if (data.imageData) {
+    if (data.result) {
       // Create and display the image
       const img = document.createElement('img');
-      img.src = data.imageData;
+      img.src = data.result[0];
       img.alt = `Generated image of ${userPrompt}`;
       img.style.maxWidth = '400px';
       img.style.height = 'auto';
@@ -88,7 +86,7 @@ function callCharacterAPI() {
       imgContainer.style.textAlign = 'center';
       imgContainer.appendChild(img);
       
-      const inputContainer = document.querySelector('.input-container');
+      const inputContainer = document.querySelector('.loading-spinner');
       
       const existingImgContainer = document.querySelector('.generated-image-container');
       if (existingImgContainer) {
