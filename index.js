@@ -75,7 +75,7 @@ function callCharacterAPI() {
     if (data.result) {
       // Create and display the image
       const img = document.createElement('img');
-      img.src = data.result[0];
+      img.src = data.result;
       img.alt = `Generated image of ${userPrompt}`;
       img.style.maxWidth = '400px';
       img.style.height = 'auto';
