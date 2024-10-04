@@ -77,10 +77,10 @@ function callCharacterAPI() {
       const img = document.createElement('img');
       img.src = data.result;
       img.alt = `Generated image of ${userPrompt}`;
-      img.style.maxWidth = '400px';
+      img.style.maxWidth = '350px';
       img.style.height = 'auto';
       img.style.marginTop = '20px';
-      img.style.borderRadius = '15px';
+      img.style.borderRadius = '10px';
       
       const imgContainer = document.createElement('div');
       imgContainer.style.textAlign = 'center';
