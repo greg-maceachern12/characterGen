@@ -169,10 +169,10 @@ body {
 }
 
 .button-container {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 4rem;
   animation: fadeInUp 1s ease-out 1s both;
 }
 .coffee-button {
@@ -236,4 +236,9 @@ body {
   .scrolling-text {
     width: 90%;
   }
+}
+
+#callout {
+  font-size: 1em;
+  color:lightgrey
 }
